@@ -18,7 +18,10 @@ type Handler struct {
 }
 
 func NewHandler(store types.ProductStore, userStore types.UserStore) *Handler {
-	return &Handler{store: store, userStore: userStore}
+	return &Handler{
+		store: store,
+		userStore: userStore,
+	}
 }
 
 func (h *Handler) RegisterRoutes(router *mux.Router) {
